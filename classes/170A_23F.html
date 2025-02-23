@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Osman Akar</title>
+<meta charset="UTF-8">
+
+<!--link rel="stylesheet" href="styles/layout.css" type="text/css">
+<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+
+<style>
+/*
+HTML 5 Template Name: Basic 63
+File: Layout CSS
+Author: OS Templates
+Author URI: https://www.os-templates.com/
+Licence: <a href="https://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+html{overflow-y:scroll;}
+
+/*Georgia, "Times New Roman", Times, serif*/
+body{margin:0; padding:0; font-size:13px; font-family:Arial; color:#FFFFFF; background-color:#1E1E1E;}
+
+/*body{margin:0; padding:0; font-size:13px; font-family:Arial; color:#FFFFFF; background-color:#FFFFFF;}*/
+
+.clear:after{content:"."; display:block; height:0; clear:both; visibility:hidden; line-height:0;}
+.clear{display:block; width:100%; clear:both;}
+html[xmlns] .clear{display:block;}
+* html .clear{height:1%;}
+
+a{outline:none; text-decoration:none;}
+
+code{font-weight:normal; font-style:normal; font-family:Georgia, "Times New Roman", Times, serif;}
+
+.fl_left{float:left;}
+.fl_right{float:right;}
+
+img{margin:0; padding:0; border:none; line-height:normal; vertical-align:middle;}
+.imgholder, .imgl, .imgr{padding:4px; border:1px solid #D6D6D6; text-align:center;}
+.imgl{float:left; margin:0 15px 15px 0; clear:left;}
+.imgr{float:right; margin:0 0 15px 15px; clear:right;}
+
+/*----------------------------------------------HTML 5 Overrides-------------------------------------*/
+
+address, article, aside, figcaption, figure, footer, header, nav, section{display:block; margin:0; padding:0;}
+
+q{display:block; padding:0 10px 8px 10px; color:#979797; background-color:#ECECEC; font-style:italic; line-height:normal;}
+q:before{content:'� '; font-size:26px;}
+q:after{content:' �'; font-size:26px; line-height:0;}
+
+/*----------------------------------------------Generalise-------------------------------------*/
+
+/*header length : width*/
+header, footer{display:block; margin:0 auto; width:950px;}
+
+nav ul{margin:0; padding:0; list-style:none;}
+
+h1, h3, h4, h5, h6{margin:0; padding:0; font-size:24px; font-weight:normal; font-style:normal; line-height:normal;}
+h2{margin:0; padding:0; font-size:20px; font-weight:normal; font-style:normal; line-height:normal;}
+
+
+/*----------------------------------------------Header-------------------------------------*/
+
+header, header a{color:#C0BAB6; background-color:#333333;}
+
+/*header, header a{color:#333333; background-color:#FFFFFF;}*/
+
+header #hgroup{float:left; padding:20px;}
+header #hgroup h1, header #hgroup h2{}
+header #hgroup h1{font-size:30px;}
+header #hgroup h2{font-size:13px;}
+
+header nav{float:right; padding:20px;}
+header nav ul{margin-top:20px;}
+header nav li{display:inline; margin-right:15px; text-transform:uppercase;}
+header nav li.last{margin-right:0;}
+header nav a{color:#C0BAB6; background-color:#333333;}
+header nav a:hover{color:#FF9900; background-color:#333333;}
+
+/*----------------------------------------------Content Area-------------------------------------*/
+
+/*#container{display:block; margin:0 auto; width:900px; padding:30px 20px 0 20px; color:#979797; background-color:#FFFFFF;}*/
+#container{display:block; margin:0 auto; width:910px; padding:30px 20px 0 20px; color:#979797; background-color:#FFFFFF;}
+
+/* ------Content-----*/
+
+#container #content{float:left; width:900px;}
+#container #content a{color:#000000; background-color:#FFFFFF;}
+
+#container #content .more{text-align:right; text-transform:uppercase; font-size:smaller; font-weight:bold;}
+
+#container section{margin:0 0 30px 0;}
+#container section.last{margin:0;}
+
+#container section article{display:block; width:280px; float:left;}
+#container section article.odd{margin-right:30px;}
+#container section article.even{margin-right:0;}
+
+#container section article figure{}
+#container section article figure img{float:left; clear:left; margin:0 10px 3px 0; padding:4px; border:1px solid #333333;}
+#container section article figure figcaption{display:none;}
+
+#container section article h2{font-size:14px; font-weight:bold; text-transform:uppercase;}
+#container section article address{font-size:10px; font-style:normal;}
+#container section article time{font-size:10px;}
+
+/* ------Right Column-----*/
+
+#container aside{float:right; width:300px;}
+
+#container aside nav{display:block; width:300px; margin-bottom:30px;}
+#container aside nav h2{margin:0 0 20px 0; color:#666666; background-color:#F9F9F9;}
+#container aside nav ul{margin:0; padding:0; list-style:none;}
+#container aside nav li{margin:0 0 3px 0; padding:0;}
+#container aside nav ul ul, #container aside nav ul ul ul, #container aside nav ul ul ul ul, #container aside nav ul ul ul ul ul{border-top:none; padding-top:0;}
+#container aside nav a{display:block; margin:0; padding:5px 10px 5px 20px; color:#666666; background:url("../images/orange_file.gif") no-repeat 10px center #F9F9F9; text-decoration:none; border-bottom:1px dotted #666666;}
+#container aside nav a:hover{color:#FF9900; background-color:#F9F9F9;}
+#container aside nav ul ul a, #container aside nav ul ul ul a, #container aside nav ul ul ul ul a, #container aside nav ul ul ul ul ul a{background:url("../images/black_file.gif") no-repeat #F9F9F9;}
+#container aside nav ul ul a{padding-left:40px; background-position:30px center;}
+#container aside nav ul ul ul a{padding-left:50px; background-position:40px center;}
+#container aside nav ul ul ul ul a{padding-left:60px; background-position:50px center;}
+#container aside nav ul ul ul ul ul a{padding-left:70px; background-position:60px center;}
+
+
+
+p.about {
+  max-width: 700px;
+}
+p.tutoring {
+  max-width: 700px;
+}
+p.research{
+  max-width: 800px;  
+}
+
+/*----------------------------------------------Footer-------------------------------------*/
+
+/*footer, footer a{color:#333333; background-color:#FFFFFF;}*/
+footer, footer a{color:#FFFFFF; background-color:#1E1E1E;}
+footer p{margin:0; padding:20px 0;}
+</style>
+</head>
+<body>
+<header>
+  <div id="hgroup">
+    <h1><a href="index.html">&nbsp &nbsp Osman Akar</a></h1>
+    <br>
+    <h2>&nbsp &nbsp &nbsp &nbsp Graduate Student at <u><a href="https://www.math.ucla.edu/" target="_blank">UCLA Mathematics Department</a></u></h2>
+
+
+  </div>
+  <nav>
+  <!-- Above Linkes -->
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../CV.html">CV</a></li>
+      <li><a href="../teaching.html" >Teaching</a></li>
+      <li><a href="tutoring.html" >Tutoring</a></li>
+      <li><a href="170E_23F.html">170E</a></li>
+      <li><a href="170A_23F.html">170A</a></li>
+      <li class="last"><a href="../notes.html">Notes</a></li>
+    </ul>
+  </nav>
+  <div class="clear"></div> 
+</header>
+<!-- content -->
+<div id="container">
+  <!-- content body -->
+  <div id="content">
+    <!-- section 1 -->
+
+<style>
+div.relative {
+  position: relative;
+  left: 30px;
+}
+</style>
+    <section>  
+
+    <h1 id="current_teaching"> &nbsp &nbsp Logistics of Discussion Math 170A - Lec1 (23F)</h1>
+        
+            <ul>
+              <li> <strong>Instructor </strong>:  <a href="TBD" target="_blank">TBD</a> </li>
+              <li><strong>Teaching Assistant </strong>: <a href="https://www.math.ucla.edu/~oak/" target="_blank">Osman Akar</a></li>
+              <li> <strong>Discussion Time </strong>: Tuesdays at 9-9.50pm in MS 6229. 
+              </li>
+              
+              <li><strong>email </strong>: oak@math.ucla.edu</li>
+
+              <li><strong>Email Policy </strong>: Please do not send me math questions via email, instead I prefer you to come to my office hours. 
+              It is quite time consuming to answer math questions via email because I cannot write mathematical symbols easily. 
+              </li>
+                  
+              <li><strong>Office Hours </strong>: 
+
+                You are most welcomed to attend the office hours, even when you don't have questions but you want to see other student's questions, 
+                or you just want to chat in general. I was also UCLA undergrad and I have spent almost 7 years here, so I have quite an experience 
+                of being a math major. I plan to hold both in person and online office hours (via zoom of course), but this is subject to change. 
+                
+                
+                <ul>
+                   <!--li> (Tentative) Thursdays 4-4.50pm in MS 7601 (Right after the discussion).  Tentatively this is in person. In case we 
+                   change the zoom OH, the link is the same as the Open OH link I put below.</li> 
+                   <li> Open Office Hours: Tuesdays at 4pm via Zoom.</li>  
+                   <li> Here is the <a href="https://ucla.zoom.us/j/97532843825?pwd=RldkOElSd25Lc0pYT3R1NTgrbDBKQT09" target="_blank">zoom link</a> for both OH, or here are meeting details:<br> 
+                        Meeting ID: 975 3284 3825, Passcode: 896714 <br>
+                        <a href="https://ucla.zoom.us/j/97532843825?pwd=RldkOElSd25Lc0pYT3R1NTgrbDBKQT09" target="_blank">https://ucla.zoom.us/j/97532843825?pwd=RldkOElSd25Lc0pYT3R1NTgrbDBKQT09</a>
+                                                                    </li>
+                   <li>You can read more information about Open OH <a href="https://ww3.math.ucla.edu/my-calendar/?cid=my-calendar&month=1&yr=2021&format=calendar&mcat=49" target="_blank">here</a>.</li-->
+                </ul>  
+              </li>   
+
+              <li><strong>Useful Links (Free materials UCLA offers) </strong>:                                 
+                <ul>
+                   <li> MATLAB is free for UCLA Students: <a href="https://softwarecentral.ucla.edu/matlab-getmatlab" target="_blank"> click the link</a> </li> 
+                   <li> Microsoft Office is also free: <a href="https://www.it.ucla.edu/news/microsoft-office-proplus" target="_blank"> click the link</a> </li>                     
+                   <li> You can read <a href="https://www.economist.com/" target="_blank">The Economist</a> magazine for free if you are on UCLA network. 
+                   If not, you can use <a href="https://www.it.ucla.edu/it-support-center/services/virtual-private-network-vpn-clients" target="_blank">UCLA VPN</a>. 
+                   Note that being on UCLA network is also useful to download articles from a number of publishers and also from UCLA library.
+                   </li>
+                </ul>  
+              </li>  
+              <!--li>Worksheets: 
+              <a target="_blank" href="../docs/teaching/70_22S/W1.pdf" title="70_W1">[W1]</a>
+              &nbsp;&nbsp;<a target="_blank" href="../docs/teaching/70_22S/W2.pdf" title="70_W2">[W2]</a>
+              &nbsp;&nbsp;<a target="_blank" href="../docs/teaching/70_22S/W3.pdf" title="70_W3">[W3]</a>
+              &nbsp;&nbsp;<a target="_blank" href="../docs/teaching/70_22S/W4.pdf" title="70_W4">[W4]</a>
+            </li-->   
+
+              
+                         
+              <!--li><a target="_blank" href="docs/teaching/170E_22W/Math_170E_21W_Discussion_Logistics.pdf" title="Math_170E_21W_Discussion_Logistics">Math_170E_21W_Discussion_Logistics</a></li-->
+   
+              <!--li>See CCLE for Zoom links for both Discussion Sessions and OHs</li-->
+              <!--li>The written class notes and recorded videos will be uploaded to CCLE after each discussion section.</li-->
+              <!--li>Notes: TBA.
+              <!--<a target="_blank" href="docs/teaching/170E_20F/170E_20F_W1_typed_discussion_notes.pdf" title="CV">[W1-1]</a>
+              &nbsp;&nbsp;<a target="_blank" href="docs/teaching/170E_20F/170E_20F_discussion_notes_W1.pdf" title="CV">[W1-2]</a>-!!>
+              </li-->            
+            </ul> 
+          <br> <br>
+
+          
+     <br>
+
+
+     <!--
+    <h2 id="previous_teaching">&nbsp &nbsp &nbsp Previous Teachings</h2>
+      <ol>
+        <li>20S: Math170E - Introduction to Probability and Statistics 1: Probability with <a href="https://www.math.ucla.edu/people/visiting/hungdnguyen" target="_blank">Prof. Hung Nguyen</a></li>
+        <li>20W: Math170E - Introduction to Probability and Statistics 1: Probability with <a href="https://www.math.ucla.edu/~harropgriffiths/" target="_blank">Prof. Benjamin Harrop-Griffiths</a></li>
+        <li>19F: Math170E - Introduction to Probability and Statistics 1: Probability with <a href="https://www.math.ucla.edu/~sweehong/" target="_blank">Prof. Swee Hong Chan</a></li>
+      </ol>
+     -->
+    
+  
+
+
+      <!-- <h1>Teaching </h1>
+
+      <ol>
+        <li><code>&lt;section&gt;</code> - surrounding block</li>
+        <li><code>&lt;article&gt;</code> - individual posts</li>
+        <li><code>&lt;figure&gt;</code> - image</li>
+        <li><code>&lt;figcaption&gt;</code> - image caption</li>
+        <li><code>&lt;address&gt;</code> - post poster</li>
+        <li><code>&lt;time&gt;</code> - the time of the post</li>
+        <li><code>&lt;q&gt;</code> - a quotation</li>
+      </ol>-->
+      
+      
+    <!--
+      <p>The following <code>&lt;section&gt;</code> element uses a <code>class=&quot;clear&quot;</code> ( <code>&lt;section class=&quot;clear&quot;&gt;</code> ) to clear the floating article elements.</p>
+    </section>
+    <- section 2 ->
+    <section class="clear">
+      <- article 1 ->
+      <article class="odd">
+        <figure><img src="images/demo/80x80.gif" alt="">
+          <figcaption>This is the caption / description for the image</figcaption>
+        </figure>
+        <h2>Post Title</h2>
+        <address>
+        Admin, domainname.com
+        </address>
+        <time datetime="2012-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2012 @08:15:00</time>
+        <p>Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis.</p>
+        <q>This is a quote, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti</q>
+        <p>Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit.</p>
+        <p class="more"><a href="#">Read More &raquo;</a></p>
+      </article>
+      <!-- article 2 ->
+      <article class="even">
+        <figure><img src="images/demo/80x80.gif" alt="">
+          <figcaption>This is the caption / description for the image</figcaption>
+        </figure>
+        <h2>Post Title</h2>
+        <address>
+        Admin, domainname.com
+        </address>
+        <time datetime="2012-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2012 @08:15:00</time>
+        <p>Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui.</p>
+        <p class="more"><a href="#">Read More &raquo;</a></p>
+      </article>
+      <!-- / articles>
+    </section>-->
+    
+
+    
+
+   
+    
+  </div>
+  <!-- right column -->
+  <!--
+  <aside>
+    <nav>
+      <h2>&lt;Aside&gt; + &lt;Nav&gt;</h2>
+      <ul>
+        <li><a href="#">Free Website Templates</a></li>
+        <li><a href="#">Free CSS Templates</a>
+          <ul>
+            <li><a href="#">Free XHTML Templates</a></li>
+            <li><a href="#">Free Web Templates</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Free Website Layouts</a>
+          <ul>
+            <li><a href="#">Free HTML 5 Templates</a></li>
+            <li><a href="#">Free Webdesign Templates</a>
+              <ul>
+                <li><a href="#">Free FireWorks Templates</a></li>
+                <li><a href="#">Free PNG Templates</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Free Website Themes</a></li>
+      </ul>
+    </nav>
+  </aside>-->
+  <!-- / content body -->
+  <div class="clear"></div>
+  
+
+</div>
+
+
+<footer>
+<section>
+      <h1>Contact Info</h1>
+      <ol>
+        <li><b>Office: </b> MS 7601</li>
+        <li><b>email1:</b> oak@math.ucla.edu</li>
+        <li><b>email2:</b> osmanakar1123@hotmail.com</li>
+        <li><a href="https://www.linkedin.com/in/osmanakar/" target="_blank">LinkedIn</a> </li>
+      </ol>
+</section>
+</footer>
+
+
+<footer>
+  <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">math.ucla.edu/oak</a></p>
+  <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+  <div class="clear"></div>
+</footer>
+
+</body>
+</html>

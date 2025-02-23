@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Osman Akar</title>
+<meta charset="UTF-8">
+
+<!--link rel="stylesheet" href="styles/layout.css" type="text/css">
+<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+
+<style>
+/*
+HTML 5 Template Name: Basic 63
+File: Layout CSS
+Author: OS Templates
+Author URI: https://www.os-templates.com/
+Licence: <a href="https://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+html{overflow-y:scroll;}
+
+/*Georgia, "Times New Roman", Times, serif*/
+body{margin:0; padding:0; font-size:13px; font-family:Arial; color:#FFFFFF; background-color:#1E1E1E;}
+
+/*body{margin:0; padding:0; font-size:13px; font-family:Arial; color:#FFFFFF; background-color:#FFFFFF;}*/
+
+.clear:after{content:"."; display:block; height:0; clear:both; visibility:hidden; line-height:0;}
+.clear{display:block; width:100%; clear:both;}
+html[xmlns] .clear{display:block;}
+* html .clear{height:1%;}
+
+a{outline:none; text-decoration:none;}
+
+code{font-weight:normal; font-style:normal; font-family:Georgia, "Times New Roman", Times, serif;}
+
+.fl_left{float:left;}
+.fl_right{float:right;}
+
+img{margin:0; padding:0; border:none; line-height:normal; vertical-align:middle;}
+.imgholder, .imgl, .imgr{padding:4px; border:1px solid #D6D6D6; text-align:center;}
+.imgl{float:left; margin:0 15px 15px 0; clear:left;}
+.imgr{float:right; margin:0 0 15px 15px; clear:right;}
+
+/*----------------------------------------------HTML 5 Overrides-------------------------------------*/
+
+address, article, aside, figcaption, figure, footer, header, nav, section{display:block; margin:0; padding:0;}
+
+q{display:block; padding:0 10px 8px 10px; color:#979797; background-color:#ECECEC; font-style:italic; line-height:normal;}
+q:before{content:'� '; font-size:26px;}
+q:after{content:' �'; font-size:26px; line-height:0;}
+
+/*----------------------------------------------Generalise-------------------------------------*/
+
+/*header length : width*/
+header, footer{display:block; margin:0 auto; width:950px;}
+
+nav ul{margin:0; padding:0; list-style:none;}
+
+h1, h3, h4, h5, h6{margin:0; padding:0; font-size:24px; font-weight:normal; font-style:normal; line-height:normal;}
+h2{margin:0; padding:0; font-size:20px; font-weight:normal; font-style:normal; line-height:normal;}
+
+
+/*----------------------------------------------Header-------------------------------------*/
+
+header, header a{color:#C0BAB6; background-color:#333333;}
+
+/*header, header a{color:#333333; background-color:#FFFFFF;}*/
+
+header #hgroup{float:left; padding:20px;}
+header #hgroup h1, header #hgroup h2{}
+header #hgroup h1{font-size:30px;}
+header #hgroup h2{font-size:13px;}
+
+header nav{float:right; padding:20px;}
+header nav ul{margin-top:20px;}
+header nav li{display:inline; margin-right:15px; text-transform:uppercase;}
+header nav li.last{margin-right:0;}
+header nav a{color:#C0BAB6; background-color:#333333;}
+header nav a:hover{color:#FF9900; background-color:#333333;}
+
+/*----------------------------------------------Content Area-------------------------------------*/
+
+/*#container{display:block; margin:0 auto; width:900px; padding:30px 20px 0 20px; color:#979797; background-color:#FFFFFF;}*/
+#container{display:block; margin:0 auto; width:910px; padding:30px 20px 0 20px; color:#979797; background-color:#FFFFFF;}
+
+/* ------Content-----*/
+
+#container #content{float:left; width:900px;}
+#container #content a{color:#000000; background-color:#FFFFFF;}
+
+#container #content .more{text-align:right; text-transform:uppercase; font-size:smaller; font-weight:bold;}
+
+#container section{margin:0 0 30px 0;}
+#container section.last{margin:0;}
+
+#container section article{display:block; width:280px; float:left;}
+#container section article.odd{margin-right:30px;}
+#container section article.even{margin-right:0;}
+
+#container section article figure{}
+#container section article figure img{float:left; clear:left; margin:0 10px 3px 0; padding:4px; border:1px solid #333333;}
+#container section article figure figcaption{display:none;}
+
+#container section article h2{font-size:14px; font-weight:bold; text-transform:uppercase;}
+#container section article address{font-size:10px; font-style:normal;}
+#container section article time{font-size:10px;}
+
+/* ------Right Column-----*/
+
+#container aside{float:right; width:300px;}
+
+#container aside nav{display:block; width:300px; margin-bottom:30px;}
+#container aside nav h2{margin:0 0 20px 0; color:#666666; background-color:#F9F9F9;}
+#container aside nav ul{margin:0; padding:0; list-style:none;}
+#container aside nav li{margin:0 0 3px 0; padding:0;}
+#container aside nav ul ul, #container aside nav ul ul ul, #container aside nav ul ul ul ul, #container aside nav ul ul ul ul ul{border-top:none; padding-top:0;}
+#container aside nav a{display:block; margin:0; padding:5px 10px 5px 20px; color:#666666; background:url("../images/orange_file.gif") no-repeat 10px center #F9F9F9; text-decoration:none; border-bottom:1px dotted #666666;}
+#container aside nav a:hover{color:#FF9900; background-color:#F9F9F9;}
+#container aside nav ul ul a, #container aside nav ul ul ul a, #container aside nav ul ul ul ul a, #container aside nav ul ul ul ul ul a{background:url("../images/black_file.gif") no-repeat #F9F9F9;}
+#container aside nav ul ul a{padding-left:40px; background-position:30px center;}
+#container aside nav ul ul ul a{padding-left:50px; background-position:40px center;}
+#container aside nav ul ul ul ul a{padding-left:60px; background-position:50px center;}
+#container aside nav ul ul ul ul ul a{padding-left:70px; background-position:60px center;}
+
+
+
+p.about {
+  max-width: 700px;
+}
+p.tutoring {
+  max-width: 700px;
+}
+
+p.research{
+  max-width: 800px;  
+}
+
+/*----------------------------------------------Footer-------------------------------------*/
+
+/*footer, footer a{color:#333333; background-color:#FFFFFF;}*/
+footer, footer a{color:#FFFFFF; background-color:#1E1E1E;}
+footer p{margin:0; padding:20px 0;}
+</style>
+</head>
+<body>
+<header>
+  <div id="hgroup">
+    <h1><a href="index.html">&nbsp &nbsp Osman Akar</a></h1>
+    <br>
+    <h2>&nbsp &nbsp &nbsp &nbsp Graduate Student at <u><a href="https://www.math.ucla.edu/" target="_blank">UCLA Mathematics Department</a></u></h2>
+
+
+  </div>
+  <nav>
+  <!-- Above Linkes -->
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">CV</a></li>
+      <li><a href="teaching.html" >Teaching</a></li>
+      <li><a href="tutoring.html" >Tutoring</a></li>
+      <li class="last"><a href="notes.html">Notes</a></li>
+    </ul>
+  </nav>
+  <div class="clear"></div> 
+</header>
+<!-- content -->
+<div id="container">
+  <!-- content body -->
+  <div id="content">
+    <!-- section 1 -->
+
+<style>
+div.relative {
+  position: relative;
+  left: 30px;
+}
+</style>
+    <section>
+       
+
+    <h1>&nbsp &nbsp Books I have been reading recently</h1>
+     
+      
+      <ul>
+        <!--li> <b>Math Related</b>
+          <br> <br>
+          <ol>
+            
+            <li> Durrett </li>  
+            <li>  </li>    
+          </ol-->
+
+
+        </li> <br>
+
+
+        <li> <b>Informative</b>
+          <br> <br>
+          <ol>
+            <li>World Order - Henry Kissenger </li>    
+            <li>The Man Who Solved the Market - Gregory Zuckerman</li>   
+            <li>Bunu Herkes Bilir - Emrah Safa Gurkan</li>    
+            <li>Why Nations Fail - Acemoglu & Robinson</li>    
+            <li>Ataturk - Ilber Ortayli</li>
+            <li>A Mathematicians Apology - Hardy</li>    
+
+
+          </ol>
+        </li><br>
+
+        <li> <b>Pleasure & Literature </b>. 
+          <br> <br>
+          <ol>
+            <li>The Silmarillion - Tolkien </li>
+            <li>Brave New World - Aldous Huxley</li>
+            <li>The Tartar Steppe - Dino Buzzati </li>
+            <li>Dune - Frank Herbert (2021 May) </li>
+            <li>Flight of the Storks - Jean-Christophe Grange  (2021 May) </li>
+            <li>Dune Messiah - Frank Herbert (2021 June) </li>
+
+
+                        
+          </ol>
+        </li><br>
+
+        <li> <b>Turkish Literature  </b>. 
+          <br> <br>
+          <ol>
+            <li>Antika Titanik - Murat Mentes</li>
+            <li>Puslu Kitalar Atlasi - Ihsan Oktay Anar</li>     
+            <li>Her Temas Iz Birakir - Emrah Serbes</li>
+            <li>Son Harfiyat - Emrah Serbes</li>    
+            <li>Kurt Kanunu - Kemal Tahir </li>
+          </ol>
+        </li><br>
+
+        
+    
+
+       </ul>
+    
+    <br>
+
+    
+  </div>
+  <!-- right column -->
+  <!--
+  <aside>
+    <nav>
+      <h2>&lt;Aside&gt; + &lt;Nav&gt;</h2>
+      <ul>
+        <li><a href="#">Free Website Templates</a></li>
+        <li><a href="#">Free CSS Templates</a>
+          <ul>
+            <li><a href="#">Free XHTML Templates</a></li>
+            <li><a href="#">Free Web Templates</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Free Website Layouts</a>
+          <ul>
+            <li><a href="#">Free HTML 5 Templates</a></li>
+            <li><a href="#">Free Webdesign Templates</a>
+              <ul>
+                <li><a href="#">Free FireWorks Templates</a></li>
+                <li><a href="#">Free PNG Templates</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Free Website Themes</a></li>
+      </ul>
+    </nav>
+  </aside>-->
+  <!-- / content body -->
+  <div class="clear"></div>
+  
+
+</div>
+
+
+<footer>
+<section>
+      <h1>Contact Info</h1>
+      <ol>
+        <li><b>Office: </b> MS 3919</li>
+        <li><b>email1:</b> oak@math.ucla.edu</li>
+        <li><b>email2:</b> osmanakar1123@hotmail.com</li>
+        <li><b>Phone: </b><strike>424-535-7426</strike> I am outside of the US so contact me via email.</li>
+        <li><a href="https://www.linkedin.com/in/osmanakar/" target="_blank">LinkedIn</a> </li>
+      </ol>
+</section>
+</footer>
+
+
+<footer>
+  <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">math.ucla.edu/oak</a></p>
+  <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+  <div class="clear"></div>
+</footer>
+
+</body>
+</html>

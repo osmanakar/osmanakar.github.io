@@ -1,0 +1,169 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{amsmath,fullpage}
+\usepackage{amssymb,amsmath}
+\author{Osman Akar}
+\date{July 2016}
+\title{Notes on the Evans PDE \\ UCLA REU }
+\begin{document}
+	
+\maketitle
+
+This document is written for the book "Partial Differential Equations" by Lawrence C. Evans (Second Edition). The document prepared under UCLA 2016 Pure REU Program. \\
+
+\textbf{On Poisson's Formula for Balls, p.40-41} \\
+
+
+The book does $Poisson's \, Formula$ for the unit ball, then uses change of variables to generalize for any ball centered at the origin. We'll complete the proof and it will help the reader to understand better the concept of surface integral. 
+
+We suppose that $u:\overline{B(0,r)} \rightarrow \Re$ is harmonic in $B^{0}(0,r)$. Fix $x$, and define $\tilde{u}:\overline{B(0,1)} \rightarrow \Re$ with $\tilde{u}(y)=u(ry)$ for all $y\in B(0,1) $. Then $$u(rx)=\tilde{u}(x)=\frac{1-|x|^2}{n\alpha(n)}\int_{\partial B(0,1)}\frac{\tilde{u}(y)}{|x-y|^n}dS(y)=\frac{1-|x|^2}{n\alpha(n)}\int_{\partial B(0,1)}\frac{u(ry)}{|x-y|^n}dS(y) \,\,\,(1)$$
+Denote $B^{n-1}(0,1)$ to show the unit ball in $\Re^{n-1}$, and $\tilde{y}=(y_1,y_2,...,y_{n-1})$ to show variable in $\Re^{n-1}$.
+Define functions $\gamma^1 , \gamma^2 : \overline{B^{n-1}(0,1)}\rightarrow \partial B(0,1)$ such that
+$$\gamma^1(\tilde{y})=(\gamma^1_1(\tilde{y}),\gamma^1_2(\tilde{y}),...,\gamma^1_n(\tilde{y}))=(y_1,y_2,...,y_{n-1},(1-|\tilde{y}|^2)^{\frac{1}{2}})$$
+in other words,  $$\gamma^1(y_1,y_2,...,y_{n-1})=(y_1,y_2,...,y_{n-1},(1-{y_1}^2-{y_2}^2-...-{y_{n-1}}^2)^{\frac{1}{2}})$$ and similarly $$\gamma^2(\tilde{y})=(\gamma^2_1(\tilde{y}),\gamma^2_2(\tilde{y}),...,\gamma^2_n(\tilde{y}))=(y_1,y_2,...,y_{n-1},(1-|\tilde{y}|^2)^{\frac{1}{2}})$$ It is clear that $Im(\gamma^1)\cup Im(\gamma^2)=\partial B(0,1)$, and $Im(\gamma^1)\cap Im(\gamma^2)=\partial B(0,1)\cap\{y_n=0\}$ so that $Im(\gamma^1)\cap Im(\gamma^2)$ is $(n-2)$ surface in $ \Re^n$. Therefore $$\int_{\partial B(0,1)}\frac{u(ry)}{|x-y|^n}dS(y)=\int_{Im(\gamma^1)}\frac{u(ry)}{|x-y|^n}dS(y)+\int_{Im(\gamma^2)}\frac{u(ry)}{|x-y|^n}dS(y)\,\,\,(2)$$
+The Jacobian matrix of $\gamma^1$ is $$D\gamma^1(y_1,y_2,...,y_{n-1})=\begin{pmatrix}1& 0& 0& \dots &0 & 0\\ 0& 1& 0 & \dots& 0&0 \\ & & & \cdot \\& & &  \cdot\\& & & \cdot\\0& 0& 0& \cdots& 0& 1 \\ \frac{-y_1}{\gamma^1_n(\tilde{y})} & \frac{-y_2}{\gamma^1_n(\tilde{y})} & \frac{-y_3}{\gamma^1_n(\tilde{y})} & \cdots & \frac{-y_{n-2}}{\gamma^1_n(\tilde{y})} & \frac{-y_{n-1}}{\gamma^1_n(\tilde{y})}
+\end{pmatrix}$$ 
+By simple  row and column operations, one can calculate $$det((D\gamma^1) ^T \cdot D\gamma^1)=\frac{1}{\gamma^1_n(\tilde{y})^2}=\frac{1}{1-|\tilde{y}|^2} $$ Let $f(y)=\frac{u(ry)}{|x-y|^n}$. Therefore, the surface integral is
+\begin{eqnarray*}	\int_{Im(\gamma^1)}\frac{u(ry)}{|x-y|^n}dS(y)	&=&\int_{Im(\gamma^1)}f(y)dS(y)\\
+&=&\int_{B^{n-1}(0,1)}f(\gamma^1(\tilde{y}))\sqrt{det((D\gamma^1) ^T \cdot D\gamma^1)}d\tilde{y}\\
+&=&\int_{B^{n-1}(0,1)}f(\gamma^1(\tilde{y}))\frac{1}{(1-|\tilde{y}|^2)^{\frac{1}{2}}} d\tilde{y}   \qquad \qquad  (3) 
+\end{eqnarray*}
+Here $d\tilde{y}=dy_1dy_2 ... dy_{n-1}$.
+Now we will use $Change \, of \, Variables \, Formula$. Let $\phi : B^{n-1}(0,r) \rightarrow B^{n-1}(0,1)$ such that $$\phi(\tilde{y})=\frac{\tilde{y}}{r}$$ and let $$h(\tilde{y})=\frac{f(\gamma^1(\tilde{y}))}{(1-|\tilde{y}|^2)^{\frac{1}{2}}}=\frac{u(r\gamma^1(\tilde{y}))}{|x-\gamma^1(\tilde{y})|^n}\frac{1}{(1-|\tilde{y}|^2)^{\frac{1}{2}}}$$ Clearly $\phi$ is onto and $det(D\phi)=\frac{1}{r^{n-1}}$, so we have 
+\begin{eqnarray*}
+    \int_{B^{n-1}(0,1)}f(\gamma^1(\tilde{y}))\frac{1}{(1-|\tilde{y}|^2)^{\frac{1}{2}}}d\tilde{y}
+	&=&\int_{\phi(B^{n-1}(0,r))}h(\tilde{y})d\tilde{y}\\
+	&=&\int_{B^{n-1}(0,r)}h(\phi(\tilde{y}))|det(D\phi)|d\tilde{y}\\
+	&=&\int_{B^{n-1}(0,r)}h(\frac{\tilde{y}}{r})\frac{1}{r^{n-1}}d\tilde{y}\\
+	&=&\int_{B^{n-1}(0,r)}\frac{u(r\gamma^1(\frac{\tilde{y}}{r}))}{|x-\gamma^1(\frac{\tilde{y}}{r})|^n}\frac{1}{(1-|\frac{\tilde{y}}{r}|^2)^{\frac{1}{2}}}\frac{1}{r^{n-1}}d\tilde{y}\\
+	&=&\int_{B^{n-1}(0,r)}\frac{u(r\gamma^1(\frac{\tilde{y}}{r}))}{|x-\gamma^1(\frac{\tilde{y}}{r})|^n}\frac{1}{(r^2-|\tilde{y}|^2)^{\frac{1}{2}}}\frac{1}{r^{n-2}}d\tilde{y}	\qquad(4)
+\end{eqnarray*}
+Let $\psi^1:B^{n-1}(0,r)\rightarrow\partial B(0,r)$ such that $$\psi^1(\tilde{y})=(\psi^1_1,\psi^1_2,...,\psi^1_n)=r\gamma^1(\frac{\tilde{y}}{r})=(y_1,y_2,...,y_{n-1},(r^2-y_1^2-y_2^2-...-y_{n-1}^2)^{\frac{1}{2}})$$ 
+Then by (3) and (4) \begin{eqnarray*}
+\int_{Im(\gamma^1)}\frac{u(ry)}{|x-y|^n}dS(y)&=&\int_{B^{n-1}(0,r)}f(\gamma^1(\tilde{y}))\frac{1}{(1-|\tilde{y}|^2)^{\frac{1}{2}}}d\tilde{y}\\
+&=&\int_{B^{n-1}(0,r)}\frac{u(\psi^1(\tilde{y})))}{|x-\frac{\psi^1(\tilde{y})}{r}|^n}\frac{1}{\psi^1_n(\tilde{y})}\frac{1}{r^{n-2}}d\tilde{y}	
+\end{eqnarray*}
+Define $ \psi^2$ similarly, then
+$$\int_{Im(\gamma^2)}\frac{u(ry)}{|x-y|^n}dS(y)=\int_{B^{n-1}(0,r)}\frac{u(\psi^2(\tilde{y})))}{|x-\frac{\psi^2(\tilde{y})}{r}|^n}\frac{1}{\psi^2_n(\tilde{y})}\frac{1}{r^{n-2}}d\tilde{y}$$
+Therefore, 
+\begin{eqnarray*}
+	u(rx)&=&\frac{1-|x|^2}{n\alpha(n)}\int_{\partial B(0,1)}\frac{u(ry)}{|x-y|^n}dS(y) \,\,\,\, by\,\,\, (1)\\
+	&=&\frac{1-|x|^2}{n\alpha(n)}(\int_{Im(\gamma^1)}\frac{u(ry)}{|x-y|^n}dS(y)+\int_{Im(\gamma^2)}\frac{u(ry)}{|x-y|^n}dS(y)) \,\,\, \, by\,\,\,(2) \\
+	&=&\frac{1-|x|^2}{n\alpha(n)}(\int_{B^{n-1}(0,r)}\frac{u(\psi^1(\tilde{y})))}{|x-\frac{\psi^1(\tilde{y})}{r}|^n}\frac{1}{\psi^1_n(\tilde{y})}\frac{1}{r^{n-2}}d\tilde{y}+\int_{B^{n-1}(0,r)}\frac{u(\psi^2(\tilde{y})))}{|x-\frac{\psi^2(\tilde{y})}{r}|^n}\frac{1}{\psi^2_n(\tilde{y})}\frac{1}{r^{n-2}}d\tilde{y})
+\end{eqnarray*}
+Put $\frac{x}{r}$ in the place $x$, then 
+\begin{eqnarray*}
+	u(x)&=&\frac{1-|\frac{x}{r}|^2}{n\alpha(n)}(\int_{B^{n-1}(0,r)}\frac{u(\psi^1(\tilde{y})))}{|\frac{x}{r}-\frac{\psi^1(\tilde{y})}{r}|^n}\frac{1}{\psi^1_n(\tilde{y})}\frac{1}{r^{n-2}}d\tilde{y}+\int_{B^{n-1}(0,r)}\frac{u(\psi^2(\tilde{y})))}{|\frac{x}{r}-\frac{\psi^2(\tilde{y})}{r}|^n}\frac{1}{\psi^2_n(\tilde{y})}\frac{1}{r^{n-2}}d\tilde{y})\\
+	&=&\frac{r^2-|x|^2}{n\alpha(n)}(\int_{B^{n-1}(0,r)}\frac{u(\psi^1(\tilde{y}))}{|x-\psi^1(\tilde{y})|^n}\frac{1}{\psi^1_n(\tilde{y})}d\tilde{y}+\int_{B^{n-1}(0,r)}\frac{u(\psi^2(\tilde{y}))}{|x-\psi^2(\tilde{y})|^n}\frac{1}{\psi^2_n(\tilde{y})}d\tilde{y})
+\end{eqnarray*} 
+Realize that $\psi:B^{n-1}(0,r)\rightarrow\partial B(0,r)$ defines the surface integral, as we did at (3).The only difference is $\text{det}((D\psi^1)^TD\psi^1)=\frac{r^2}{(\psi^1_n(\tilde{y}))^2}=\frac{r^2}{r^2-|\tilde{y}|^2}$. So we have
+$$\int_{B^{n-1}(0,r)}\frac{u(\psi^1(\tilde{y}))}{|x-\psi^1(\tilde{y})|^n}\frac{r}{\psi^1_n(\tilde{y})}d\tilde{y}=\int_{Im(\psi^1)}\frac{u(y)}{|x-y|^n}dS(y)$$ and $$ \int_{B^{n-1}(0,r)}\frac{u(\psi^2(\tilde{y}))}{|x-\psi^2(\tilde{y})|^n}\frac{r}{\psi^2_n(\tilde{y})}d\tilde{y}=\int_{Im(\psi^2)}\frac{u(y)}{|x-y|^n}dS(y)$$
+Note that $Im(\psi^1)=\partial B(0,r)\cap \{x_n\geq 0\}$ and $Im(\psi^2)=\partial B(0,r)\cap \{x_n\leq 0\}$.  Therefore
+\begin{eqnarray*}
+	u(x)&=&\frac{r^2-|x|^2}{n\alpha(n)}(\int_{B^{n-1}(0,r)}\frac{u(\psi^1(\tilde{y}))}{|x-\psi^1(\tilde{y})|^n}\frac{1}{\psi^1_n(\tilde{y})}d\tilde{y}+\int_{B^{n-1}(0,r)}\frac{u(\psi^2(\tilde{y}))}{|x-\psi^2(\tilde{y})|^n}\frac{1}{\psi^2_n(\tilde{y})}d\tilde{y})\\
+	&=&\frac{r^2-|x|^2}{rn\alpha(n)}\int_{\partial B(0,r)}\frac{u(y)}{|x-y|^n}dS(y) 
+\end{eqnarray*}  
+so we are done. \\ \\ \\
+
+	
+	
+	
+	
+	
+	
+	
+\textbf{On Heat Ball} \\ 
+
+In this part, we shall develop more explicit description for Heat Ball, and use this new definition to prove the equality (1) (see below). Let $\Phi:\Re^n\times (0,\infty)\rightarrow \Re$ be the fundamental solution of the heat equation, defined to be	$$\Phi(x,t)=\frac{1}{(4\pi t)^{\frac{n}{2}}}e^{\frac{-|x|^2}{4t}} $$
+The Heat Ball $E(x,t;r)$ in $\Re^n\times\Re$ is defined as
+$$ E(x,t;r)=\{(y,s)\in\Re^{n+1}|s\leq t, \Phi(x-y,t-s)\geq \frac{1}{r^n}\}$$
+The concept of Heat ball is important, since the functions that solves the heat equation $u_t-\Delta u=0$ satisfies Mean-Value Property 
+$$u(x,t)=\frac{1}{4r^n}\int_{E(x,t;r)}u(y,s)\frac{|x-y|^2}{(t-s)^2}dyds $$
+(Theorem 3 in chapter 2.3). Mean Value Property is used in the proof of Maximal principle. In the proof of Mean Value Property, the book uses an equality that $$\int_{E(0,0;1)}\frac{|y|^2}{s^2}dyds=4 \qquad(1)$$
+but does not give a proof. We shall prove the equality. First, let's give a more discrete definition for $E(x,t;r)$. Fix $s\leq t$, then
+	
+$$ (y,s)\in E(x,t;r)$$ $$\iff$$
+$$\Phi(x-y,t-s)\geq \frac{1}{r^n} $$ $$\iff $$ $$\frac{1}{(4\pi(t-s))^{\frac{n}{2}}}e^{\frac{-|x-y|^2}{4(t-s)}}\geq \frac{1}{r^n} $$ $$\iff $$
+$$	(\frac{r^2}{4\pi(t-s)})^{\frac{n}{2}}\geq e^{\frac{|x-y|^2}{4(t-s)}}  $$ $$\iff $$
+$$\frac{n}{2}\text{log}(\frac{r^2}{4\pi(t-s)})\geq \frac{|x-y|^2}{4(t-s)} $$ $$ \iff $$
+$$ 2n(t-s)\text{log}(\frac{r^2}{4\pi(t-s)})\geq |x-y|^2 \qquad (2)$$ As a first observation, we must have $$\text{log}(\frac{r^2}{4\pi(t-s)})\ge0$$ $$\iff$$ $$\frac{r^2}{4\pi(t-s)}\ge 1$$ so we have $$t-\frac{r^2}{4\pi}\le s\le t$$ Define $\gamma(t,r;s)=(2n(t-s)\text{log}(\frac{r^2}{4\pi(t-s)}))^{\frac{1}{2}}$. Then the equation (2) becomes $y\in B(x,\gamma(t,r;s))$. Therefore we can define the heat ball as $$E(x,t;r)=\{(y,s)\in\Re^{n+1}\big|t-\frac{r^2}{4\pi}\le s\le t, \> y\in B(x,\gamma(t,r;s))\} \qquad (3)$$ so we have now more precise definition than in the book.\\
+
+Let's prove the equality (1). We know that $$E(0,0;1)=\{(y,s)\in\Re^{n+1}\big|-\frac{1}{4\pi}\le s\le 0, \> y\in B(0,\gamma(0,1;s))\}$$ To make the notation simpler, change $s\rightarrow -s$, and define $$E'=\{(y,s)\in\Re^{n+1}\big|\frac{1}{4\pi}\ge s\ge 0, \> y\in B(0,\gamma(0,1;-s))\}$$ then by change of variables, we have $$\int_{E'}\frac{|y|^2}{s^2}dyds=\int_{E(0,0;1)}\frac{|y|^2}{s^2}dyds$$ Define $\beta(s)=\gamma(0,1;-s)=(2ns\text{log}(\frac{1}{4\pi s}))^{\frac{1}{2}}$, then we have \begin{eqnarray*}
+\int_{E'}\frac{|y|^2}{s^2}dyds&=&\int_{0}^{\frac{1}{4\pi}}\int_{B(0,\beta(s))}\frac{|y|^2}{s^2}dyds\\
+&=&\int_{0}^{\frac{1}{4\pi}}\frac{1}{s^2}\int_{0}^{\beta(s)}\int_{\partial B(0,v)}|y|^2dS(y)dvds\qquad(4)\\
+&=&\int_{0}^{\frac{1}{4\pi}}\frac{1}{s^2}\int_{0}^{\beta(s)}n\alpha(n)v^{n+1}dvds\\
+&=& \frac{n}{n+2}\alpha(n)\int_{0}^{\frac{1}{4\pi}}\frac{1}{s^2}\beta(s)^{n+2}ds \\
+&=&\frac{n}{n+2}\alpha(n)\int_{0}^{\frac{1}{4\pi}}\frac{1}{s^2}(2ns\text{log}(\frac{1}{4\pi s}))^{\frac{n+2}{2}}ds\\
+&=&\frac{n}{n+2}(2n)^{\frac{n+2}{2}}\alpha(n)\int_{0}^{\frac{1}{4\pi}}s^{\frac{n-2}{2}}(\text{log}(\frac{1}{4\pi s}))^{\frac{n+2}{2}}ds \qquad(5)
+\end{eqnarray*} 
+Note that we used polar coordinates at (4). Let's use change of variables again, define $\phi(s)=\frac{1}{4\pi s}$, then we have $\phi'(s)=-\frac{1}{4\pi s^2}$, so we have the equality \begin{eqnarray*}
+\int_{0}^{\frac{1}{4\pi}}s^{\frac{n-2}{2}}(\text{log}(\frac{1}{4\pi s}))^{\frac{n+2}{2}}ds&=&\int_{1}^{\infty}(\frac{1}{4\pi s})^{\frac{n-2}{2}}\text{log}(s)^{\frac{n+2}{2}}\frac{1}{4\pi s^2}ds\\
+&=&\frac{1}{(4\pi)^{\frac{n}{2}}}\int_{1}^{\infty}(\frac{1}{s})^{\frac{n+2}{2}}\text{log}(s)^{\frac{n+2}{2}}ds
+\end{eqnarray*} 
+Therefore we have equality $$\int_{E'}\frac{|y|^2}{s^2}dyds=\frac{n}{n+2}(2n)^{\frac{n+2}{2}}\alpha(n)\frac{1}{(4\pi)^{\frac{n}{2}}}\int_{1}^{\infty}(\frac{1}{s})^{\frac{n+2}{2}}\text{log}(s)^{\frac{n+2}{2}}ds$$ Before going further, let's remember the definition of $\alpha(n)$. The constant $\alpha(n)$ represents the volume of the unit ball in $\Re^n$, and we know it actually equals $$\alpha(n)=\frac{2\pi^{\frac{n}{2}}}{n\Gamma(\frac{n}{2})}$$ where $$\Gamma(k)=(k-1)!$$ and $$\Gamma(\frac{2k+1}{2})=\frac{(2k-1)!!}{2^k}\sqrt{\pi}=\frac{(2k-1)(2k-3)...1}{2^k}\sqrt{\pi}$$(See "Notes on Partial Differential Equations",  Chapter 1.6 (Averages), by John K. Hunter). So it is enough to prove that $$\int_{1}^{\infty}(\frac{1}{s})^{\frac{n+2}{2}}\text{log}(s)^{\frac{n+2}{2}}ds=\frac{2^{\frac{n}{2}}\Gamma(\frac{n}{2})(n+2)}{n^{\frac{n+2}{2}}}\qquad(6)$$ to get (1). We shall consider 2 cases, either $n$ is even or odd.\\ 
+
+\textbf{Case 1:} $n$ is even, say $n=2k$. Then (6) becomes
+$$\int_{1}^{\infty}(\frac{1}{s})^{k+1}\text{log}(s)^{k+1}ds=\frac{(k+1)!}{k^{k+2}}$$ To compute LHS, we first introduce a lemma. \\
+
+\textbf{Lemma } For $m=1,2,...,k+1$ $$\int_{1}^{\infty}(\frac{1}{s})^{k+1}\text{log}(s)^{m}ds=\frac{m}{k}\int_{1}^{\infty}(\frac{1}{s})^{k+1}\text{log}(s)^{m-1}ds\qquad(7)$$
+
+\textbf{Proof } $$\frac{\partial}{\partial s}(\frac{s^{-k}\text{log}(s)^m}{k})=-s^{-k-1}\text{log}(s)^{m}+\frac{m}{k}s^{-k-1}\text{log}(s)^{m-1}$$ Clearly at $s=1$, $\frac{s^{-k}\text{log}(s)^m}{k}=0$ and as  $s\rightarrow\infty$, $\frac{s^{-k}\text{log}(s)^m}{k}\rightarrow0$, therefore $$0=\int_{1}^{\infty}\frac{\partial}{\partial s}\frac{s^{-k}\text{log}(s)^m}{k}ds=-\int_{1}^{\infty}s^{-k-1}\text{log}(s)^{m}ds+\frac{m}{k}\int_{1}^{\infty}s^{-k-1}\text{log}(s)^{m-1}ds$$ so we prove (7). \\ 
+
+Now apply lemma for $m=k+1,k,...,1$ respectively, then 
+\begin{eqnarray*}
+\int_{1}^{\infty}(\frac{1}{s})^{k+1}\text{log}(s)^{k+1}ds&=&\frac{k+1}{k}\int_{1}^{\infty}(\frac{1}{s})^{k+1}\text{log}(s)^{k}ds\\
+&=&\frac{(k+1)k}{k^2}\int_{1}^{\infty}(\frac{1}{s})^{k+1}\text{log}(s)^{k-1}ds\\
+&\vdots& \\
+&=&\frac{(k+1)!}{k^{k+1}}\int_{1}^{\infty}(\frac{1}{s})^{k+1}ds\\
+&=&\frac{(k+1)!}{k^{k+1}}\big(-\frac{1}{ks^k}\bigg|^{\infty}_{s=1}\big)\\
+&=&\frac{(k+1)!}{k^{k+2}}
+\end{eqnarray*}
+so we prove (6) for even $n$'s. \\
+
+\textbf{Case 2:} $n$ is odd, say $n=2k-1$. Then (6) becomes
+$$\int_{1}^{\infty}(\frac{1}{s})^{\frac{2k+1}{2}}\text{log}(s)^{\frac{2k+1}{2}}ds=\frac{(2k+1)!!\sqrt{2\pi}}{(2k-1)^{\frac{2k+3}{2}}}\qquad(8)$$ We use a lemma as in \textbf{Case 1} to compute LHS\\
+
+\textbf{Lemma} For $m=k,k-1,...,0$ 
+$$\int_{1}^{\infty}(\frac{1}{s})^{\frac{2k+1}{2}}\text{log}(s)^{\frac{2m+1}{2}}ds=\frac{2m+1}{2k-1}\int_{1}^{\infty}(\frac{1}{s})^{\frac{2k+1}{2}}\text{log}(s)^{\frac{2m-1}{2}}ds$$ We won't prove the lemma since it is very similar with the other lemma in \textbf{Case 1}. Apply lemma for $m=k,k-1,...,0$ respectively, then \begin{eqnarray*}
+\int_{1}^{\infty}(\frac{1}{s})^{\frac{2k+1}{2}}\text{log}(s)^{\frac{2k+1}{2}}ds&=&\frac{2k+1}{2k-1}\int_{1}^{\infty}(\frac{1}{s})^{\frac{2k+1}{2}}\text{log}(s)^{\frac{2k-1}{2}}ds\\
+&=&\frac{2k+1}{2k-1}\frac{2k-1}{2k-1}\int_{1}^{\infty}(\frac{1}{s})^{\frac{2k+1}{2}}\text{log}(s)^{\frac{2k-3}{2}}ds\\
+&\vdots&\\
+&=&\frac{(2k+1)!!}{(2k-1)^{k+1}}\int_{1}^{\infty}(\frac{1}{s})^{\frac{2k+1}{2}}\text{log}(s)^{\frac{-1}{2}}ds
+\end{eqnarray*} So it is enough to prove $$\int_{1}^{\infty}(\frac{1}{s})^{\frac{2k+1}{2}}\text{log}(s)^{\frac{-1}{2}}ds=\sqrt{\frac{2\pi}{2k-1}}$$ to get (8). Let's use change of variables for the function $s\rightarrow e^{s^2}$, clearly the derivative is $2se^{s^2}$, so we have an equality 
+\begin{eqnarray*}
+\int_{1}^{\infty}(\frac{1}{s})^{\frac{2k+1}{2}}\text{log}(s)^{\frac{-1}{2}}ds&=&\int_{0}^{\infty}(\frac{1}{e^{s^2}})^{\frac{2k+1}{2}}\text{log}(e^{s^2})^{\frac{-1}{2}}2se^{s^2}ds\\
+&=& 2\int_{0}^{\infty}(\frac{1}{e^{s^2}})^{\frac{2k-1}{2}}ds
+\end{eqnarray*} So we need to prove that $$\int_{0}^{\infty}(\frac{1}{e^{s^2}})^{\frac{2k-1}{2}}ds=\sqrt{\frac{\pi}{2(2k-1)}}$$ which is equivalent to $$\int_{\Re}(\frac{1}{e^{s^2}})^{\frac{2k-1}{2}}ds=\sqrt{\frac{2\pi}{2k-1}}\qquad(9)$$ But \begin{eqnarray*}
+\bigg(\int_{\Re}(\frac{1}{e^{s^2}})^{\frac{2k-1}{2}}ds\bigg)^2&=&\bigg(\int_{\Re}(\frac{1}{e^{s_1^2}})^{\frac{2k-1}{2}}ds_1\bigg)\bigg(\int_{\Re}(\frac{1}{e^{s_2^2}})^{\frac{2k-1}{2}}ds_2\bigg)\\
+&=&\int_{\Re^2}(\frac{1}{e^{s_1^2+s_2^2}})^{\frac{2k-1}{2}}ds_1ds_2 \\
+&=&2\pi\int_{0}^{\infty}re^{-\frac{2k-1}{2}r^2}dr\qquad(10)\\
+&=&2\pi\bigg(-\frac{1}{2k-1}e^{-\frac{2k-1}{2}r^2}\bigg|^\infty_{r=0}\bigg)\\
+&=&\frac{2\pi}{2k-1}
+\end{eqnarray*} so we prove (9). Thus we prove (1) for even $n$'s. Note that at (10) we used polar coordinates. \\
+
+\textbf{On Strong Maximal Principle for the Heat Equation} \\ 
+
+In the proof of "Strong Maximal Principle for the Heat Equation" (THEOREM 4 at 2.3.3), the book says that for each point $(x_0,t_0)\in U_T$, there exist sufficiently small $r_0>0$ such that $E(x_0,t_0;r_0)\subset U_T$. This statement is not obvious, so let's give a proper proof for it. By (3), we already know that $$E(x_0,t_0;r)\subset\Re^n\times[t_0-\frac{r^2}{4\pi},t_0]$$ We need to find a proper upper bound for $\gamma(t_0,r;s)$, when $t_0$ and $r$ are fixed and $s$ is the only variable. Let's define a new variable $$a=\frac{4\pi (t_0-s)}{r^2}\in[0,1]$$ since $s\in[t_0-\frac{r^2}{4\pi},t_0]$. Thus we have \begin{eqnarray*}
+\gamma(t_0,r;s)^2&=&2n(t_0-s)\text{log}(\frac{r^2}{4\pi(t_0-s)}))\\
+&=&\frac{nr^2}{2\pi}a\text{log}(\frac{1}{a})
+\end{eqnarray*}
+$a\text{log}(\frac{1}{a})$ is a smooth function in (0,1), and $\underset{a\rightarrow 0}{\text{lim }}a\text{log}(\frac{1}{a})=\underset{a\rightarrow 1}{\text{lim }}a\text{log}(\frac{1}{a})=0$ so $a\text{log}(\frac{1}{a})$ obtains its max in (0,1), where the derivative is 0. But $\frac{\partial}{\partial a}a\text{log}(\frac{1}{a})=\text{log}(\frac{1}{a})-1$, so $a\text{log}(\frac{1}{a})$ obtains its max at $a=\frac{1}{e}$, so we have $$\frac{nr^2}{2\pi}a\text{log}(\frac{1}{a})\le\frac{nr^2}{2e\pi}$$ thus $$\gamma(t_0,r;s)\le r\sqrt{\frac{n}{2e\pi}}$$ combining with (3), we have $$E(x_0,t_0;r)\subset B(x_0,r\sqrt{\frac{n}{2e\pi}})\times[t_0-\frac{r^2}{4\pi},t_0]$$ Now it is easier to see why we can choose sufficiently small $r_0$ such that $E(x_0,t_0;r_0)\subset U_T$.\\ \\ \\	
+	
+
+
+
+
+
+
+
+\textbf{Bibliography}\\ \\
+$[1]$ Evans, Lawrence C., "Partial Differential Equations",\\
+$[2]$ Rudin, Walter, "Principles of Mathematical Analysis", 3rd ed., McGraw-Hill, Inc., 
+
+
+
+
+
+
+
+
+\end{document}

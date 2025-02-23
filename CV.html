@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Osman Akar</title>
+<meta charset="UTF-8">
+
+<!--link rel="stylesheet" href="styles/layout.css" type="text/css">
+<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+
+<style>
+/*
+HTML 5 Template Name: Basic 63
+File: Layout CSS
+Author: OS Templates
+Author URI: https://www.os-templates.com/
+Licence: <a href="https://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+html{overflow-y:scroll;}
+
+/*Georgia, "Times New Roman", Times, serif*/
+body{margin:0; padding:0; font-size:13px; font-family:Arial; color:#FFFFFF; background-color:#1E1E1E;}
+
+/*body{margin:0; padding:0; font-size:13px; font-family:Arial; color:#FFFFFF; background-color:#FFFFFF;}*/
+
+.clear:after{content:"."; display:block; height:0; clear:both; visibility:hidden; line-height:0;}
+.clear{display:block; width:100%; clear:both;}
+html[xmlns] .clear{display:block;}
+* html .clear{height:1%;}
+
+a{outline:none; text-decoration:none;}
+
+code{font-weight:normal; font-style:normal; font-family:Georgia, "Times New Roman", Times, serif;}
+
+.fl_left{float:left;}
+.fl_right{float:right;}
+
+img{margin:0; padding:0; border:none; line-height:normal; vertical-align:middle;}
+.imgholder, .imgl, .imgr{padding:4px; border:1px solid #D6D6D6; text-align:center;}
+.imgl{float:left; margin:0 15px 15px 0; clear:left;}
+.imgr{float:right; margin:0 0 15px 15px; clear:right;}
+
+/*----------------------------------------------HTML 5 Overrides-------------------------------------*/
+
+address, article, aside, figcaption, figure, footer, header, nav, section{display:block; margin:0; padding:0;}
+
+q{display:block; padding:0 10px 8px 10px; color:#979797; background-color:#ECECEC; font-style:italic; line-height:normal;}
+q:before{content:'� '; font-size:26px;}
+q:after{content:' �'; font-size:26px; line-height:0;}
+
+/*----------------------------------------------Generalise-------------------------------------*/
+
+/*header length : width*/
+header, footer{display:block; margin:0 auto; width:950px;}
+
+nav ul{margin:0; padding:0; list-style:none;}
+
+h1, h3, h4, h5, h6{margin:0; padding:0; font-size:24px; font-weight:normal; font-style:normal; line-height:normal;}
+h2{margin:0; padding:0; font-size:20px; font-weight:normal; font-style:normal; line-height:normal;}
+
+
+/*----------------------------------------------Header-------------------------------------*/
+
+header, header a{color:#C0BAB6; background-color:#333333;}
+
+/*header, header a{color:#333333; background-color:#FFFFFF;}*/
+
+header #hgroup{float:left; padding:20px;}
+header #hgroup h1, header #hgroup h2{}
+header #hgroup h1{font-size:30px;}
+header #hgroup h2{font-size:13px;}
+
+header nav{float:right; padding:20px;}
+header nav ul{margin-top:20px;}
+header nav li{display:inline; margin-right:15px; text-transform:uppercase;}
+header nav li.last{margin-right:0;}
+header nav a{color:#C0BAB6; background-color:#333333;}
+header nav a:hover{color:#FF9900; background-color:#333333;}
+
+/*----------------------------------------------Content Area-------------------------------------*/
+
+/*#container{display:block; margin:0 auto; width:900px; padding:30px 20px 0 20px; color:#979797; background-color:#FFFFFF;}*/
+#container{display:block; margin:0 auto; width:910px; padding:30px 20px 0 20px; color:#979797; background-color:#FFFFFF;}
+
+/* ------Content-----*/
+
+#container #content{float:left; width:900px;}
+#container #content a{color:#000000; background-color:#FFFFFF;}
+
+#container #content .more{text-align:right; text-transform:uppercase; font-size:smaller; font-weight:bold;}
+
+#container section{margin:0 0 30px 0;}
+#container section.last{margin:0;}
+
+#container section article{display:block; width:280px; float:left;}
+#container section article.odd{margin-right:30px;}
+#container section article.even{margin-right:0;}
+
+#container section article figure{}
+#container section article figure img{float:left; clear:left; margin:0 10px 3px 0; padding:4px; border:1px solid #333333;}
+#container section article figure figcaption{display:none;}
+
+#container section article h2{font-size:14px; font-weight:bold; text-transform:uppercase;}
+#container section article address{font-size:10px; font-style:normal;}
+#container section article time{font-size:10px;}
+
+/* ------Right Column-----*/
+
+#container aside{float:right; width:300px;}
+
+#container aside nav{display:block; width:300px; margin-bottom:30px;}
+#container aside nav h2{margin:0 0 20px 0; color:#666666; background-color:#F9F9F9;}
+#container aside nav ul{margin:0; padding:0; list-style:none;}
+#container aside nav li{margin:0 0 3px 0; padding:0;}
+#container aside nav ul ul, #container aside nav ul ul ul, #container aside nav ul ul ul ul, #container aside nav ul ul ul ul ul{border-top:none; padding-top:0;}
+#container aside nav a{display:block; margin:0; padding:5px 10px 5px 20px; color:#666666; background:url("../images/orange_file.gif") no-repeat 10px center #F9F9F9; text-decoration:none; border-bottom:1px dotted #666666;}
+#container aside nav a:hover{color:#FF9900; background-color:#F9F9F9;}
+#container aside nav ul ul a, #container aside nav ul ul ul a, #container aside nav ul ul ul ul a, #container aside nav ul ul ul ul ul a{background:url("../images/black_file.gif") no-repeat #F9F9F9;}
+#container aside nav ul ul a{padding-left:40px; background-position:30px center;}
+#container aside nav ul ul ul a{padding-left:50px; background-position:40px center;}
+#container aside nav ul ul ul ul a{padding-left:60px; background-position:50px center;}
+#container aside nav ul ul ul ul ul a{padding-left:70px; background-position:60px center;}
+
+
+
+p.about {
+  max-width: 700px;
+}
+p.tutoring {
+  max-width: 700px;
+}
+
+p.research{
+  max-width: 800px;  
+}
+
+/*----------------------------------------------Footer-------------------------------------*/
+
+/*footer, footer a{color:#333333; background-color:#FFFFFF;}*/
+footer, footer a{color:#FFFFFF; background-color:#1E1E1E;}
+footer p{margin:0; padding:20px 0;}
+</style>
+</head>
+<body>
+<header>
+  <div id="hgroup">
+    <h1><a href="index.html">&nbsp &nbsp Osman Akar</a></h1>
+    <br>
+    <h2>&nbsp &nbsp &nbsp &nbsp Graduate Student at <u><a href="https://www.math.ucla.edu/" target="_blank">UCLA Mathematics Department</a></u></h2>
+
+
+  </div>
+  <nav>
+  <!-- Above Linkes -->
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">CV</a></li>
+      <li><a href="teaching.html" >Teaching</a></li>
+      <li><a href="tutoring.html" >Tutoring</a></li>
+      <li><a href="classes/170E_23F.html">170E</a></li>
+      <li><a href="classes/170A_23F.html">170A</a></li>
+      <li class="last"><a href="notes.html">Notes</a></li>
+    </ul>
+  </nav>
+  <div class="clear"></div> 
+</header>
+<!-- content -->
+<div id="container">
+  <!-- content body -->
+  <div id="content">
+    <!-- section 1 -->
+
+<style>
+div.relative {
+  position: relative;
+  left: 30px;
+}
+</style>
+    <section>
+    <!-- Add resume to docs-->
+    <p>&nbsp &nbsp  &nbsp &nbsp Here is my <a target="_blank" href="docs/CV.pdf" title="CV">CV</a> and one page <a target="_blank" href="docs/osmanakar_resume.pdf" title="CV">resume</a>.
+    </p>   
+    
+    <br>
+    
+
+    <h1>&nbsp &nbsp Education </h1>
+     
+      
+      <ul>
+        <li> <b>PhD in Applied Mathematics at UCLA</b>.   (2019-Present)
+          <br> <br>
+          <ul>
+            <!--li>Physics and PDE based simulations for computer graphics</li-->
+            <li>Machine Learning </li>
+            <li>Computational Linear Algebra </li>
+            <!--li> Graph based Machine Learning  </li>  
+            <li> Image processing </li-->    
+          </ul>
+
+
+        </li> <br>
+
+
+        <li> <b>MA in Mathematics at UCLA</b>.   (2016-19)
+          <br> <br>
+          <ul>
+            <li>Mathematics Departmental Scholar</li>    
+          </ul>
+        </li><br>
+
+
+        <li> <b>BS in Mathematics of Computation at UCLA</b>.   (2015-19)
+          <br> <br>
+          <ul>
+            <li>Sole recepient of <a href="https://ww3.math.ucla.edu/ucla-math-undergraduate-merit-scholarship/" target="_blank">Math Undergraduate Merit Scholarship</a> in 2015</li>
+            <li>Graduated Cum Laude</li>     
+          </ul>
+        </li>
+
+       </ul>
+    
+    <br>
+      
+
+
+    <h1 id="past_experiences">&nbsp &nbsp Research & Projects</h1>
+      <ul>
+        <li> <b> Research Intern </b> at Epic Games (2022 Summer - Present). 
+          <br><br>          
+          <ul>
+              <!--li> Working on memory efficiency for storing 3D objects in Unreal Engine 5, specifically for chaos destruction (i.e. collision detection), using neural networks to store shape information of 3D objects. </li-->
+              <li> Designed a novel learning-based method to compute signed distance function (SDF) of human body motion depending on the rotation of 
+                joints in the skeleton, so that the deformation of the skin/muscle (especially near the joints) looks as real as possible.
+              </li>
+              <li> Our method, called ML-SDF, is a combination of multiple ML models in which each represents different parts of the human body that involves a joint (e.g. elbow, shoulder, spine, legs, etc.).
+              </li> 
+              <li> ML-SDF is used for character animation and its interaction with clothing in Unreal Engine. 
+                   The method reduces the memory cost on the RAM significantly (less than 1% memory requirement compared to the actual levelsets it's replacing). 
+                   The goal of the project is to automatize the whole process given the body mesh and its skeleton (e.g. different characters of Fortnite). 
+                   This includes joint-based body part selection, dataset generation for the corresponding body parts, and the training, all to be done inside Unreal Engine. 
+              </li>
+          </ul>
+        </li>  
+        <br>
+        
+        <li> <b>  <a target="_blank" href="https://proceedings.mlr.press/v202/kaneda23a.html" title="dcdm_paper">A Deep Conjugate Direction Method for Iteratively Solving Linear Systems</a> </b> (2021 Feb - 22 Summer)
+          <br><br>
+          
+          <ul>
+              <li>Created CNN-based linear system solver, a modified version of the  classical Conjugate Gradients (CG) method, for the systems coming from computational fluid dynamics applications (e.g. incompressible flows).
+              </li>
+              <li>Designed the network architecture and its custom loss function to perform unsupervised learning to speed up the solver. 
+                  At the moment DCDM  is 3.2 times faster than classical methods for the linear systems over 56 millions of degrees of freedom.
+              </li>              
+              <li> Developped a novel method for creating the dataset so that it does not require any simulation input, as opposed to our competitors. 
+                   This reduced the dataset size significantly, and consequently the time required to generate it and the training.
+              </li>
+              <li> The work is accepted and presented at <a target="_blank" href="https://icml.cc/Conferences/2023" title="icml_2023">ICML 2023</a> at Hawaii. 
+                Here is <a target="_blank" href="https://icml.cc/virtual/2023/poster/24899" title="icml_2023_poster">presentation</a>.
+              </li>
+          </ul>
+        </li>  <br>
+        
+        
+        <li> <b>Research Intern </b> at UCLA <a href="https://www.ipam.ucla.edu/" target="_blank">IPAM</a> <a href="https://www.ipam.ucla.edu/programs/student-research-programs/research-in-industrial-projects-for-students-rips-2018/" target="_blank">RIPS</a> 
+           <a href="https://gumgum.com/" target="_blank"> GumGum </a> Team. Here is resulting paper: <a href="https://arxiv.org/abs/1907.09394" target="_blank">[arXiv]</a> or <a href="https://link.springer.com/chapter/10.1007/978-3-030-21074-8_39" target="_blank">[springer]</a>, and <a href="docs/RIPS_GumGum_poster_ACCV.pdf" target="_blank">poster</a> (18 Summer).
+        <br> <br>
+
+          <ul>
+            <li>Worked on a research team that build automated video augmentation pipeline that identifies crowd regions in sport videos and overlays an advertisement onto these regions, so that the advertisement looks aesthetic and natural for human perspective. 
+            <a href="https://www.youtube.com/watch?v=ugZ-08c6IWY&feature=youtu.be" target="_blank">This video link</a> is an example of the final product. </li>
+
+            More explicitly, the automated video augmentation pipeline is able to
+            <ul>
+              <li>identify non-homogeneous textures (i.e., crowd regions in sports stadium imagery),</li>
+              <li>overlay a rectangular image asset on said region,</li>
+              <li>and constrain the asset to be placed in a perspective correct way for an overall enhanced user experience.</li>
+            </ul>
+
+            <li>Designed and implemented an algorithm to visualize RGB-Depth image frame in 3D. Implemented <i>Random Sample Consensus Algorithm</i> in this 3D-reconstruction to detect planes to overlay advertisement onto the image in 2D. </li>
+            <li>Developed a novel metric on video frames for the evaluation of the <a href ="https://arxiv.org/abs/1612.01105" target="blank">PSPNet</a> crowd segmentation algorithm. </li>
+            <!--li>Researched and experimented with various algorithms for focal length approximation. Optimized the focal length algorithm, reducing error percentage from %38 to %22. </li-->
+           </ul>
+        </li> <br>
+          
+        <li><b>Undergraduate Researcher </b> at <a href="https://www.marcusroper.org/reuucla" target="_blank">Computational and Applied Mathematics REU</a>.
+        Here is resulting paper preprint <a href="https://arxiv.org/abs/1904.09062" target="_blank">[arXiv]</a> (17 Summer). 
+        <br><br>
+
+        <ul>
+            <li>Worked on a research team that applied image processing techniques to extract non-content-based features 
+            from LAPD body-worn-camera video recordings and used machine learning to classify the recordings into categories. </li>
+            <li>Created color-based feature and its metric system for video frames and implemented in the ML Algorithm. </li>
+            <li>Modified the old machine learning model to accept the new dataset of LAPD videos. Experimented with tuning hyperparameters and reduced the error by 50 percent.  </li>
+        </ul>
+        </li>    
+
+      </ul>
+
+    <br>
+
+    <h1>&nbsp &nbsp Teaching </h1>
+    
+    <div class="relative">
+    <p class="tutoring"> See <a href="teaching.html">teaching</a> and <a href="tutoring.html">tutoring</a> pages.</p>
+    </div>
+
+    <br>
+      
+    <h1>&nbsp &nbsp List of Awards </h1>
+     
+      
+      <ul>
+        <li> As an undergraduate
+          <br><br>
+          <ul>
+              <li>Putnam Performance Prize by UCLA Mathematics Department, 2019</li>
+              <li>Honorable Mention at <a href="https://www.maa.org/math-competitions/putnam-competition" target="_blank">William Lowell Putnam Mathematical Computation, 2018</a></li>
+              <!--li>Honorable Mention at <a href="https://www.maa.org/sites/default/files/AnnouncementOfWinners2018.pdf" target="_blank">William Lowell Putnam Mathematical Computation, 2018</a></li-->
+              <li>Richard F. Arens Putnam Scholars Undergraduate Award, 2016 </li>
+              <li>Sole recipient of <a href ="https://ww3.math.ucla.edu/ucla-math-undergraduate-merit-scholarship/" target="_blank">UCLA Math Undergraduate Merit Scholarship</a> in class of '19.
+              Since its foundation at 2010, there are only 8 recipients of this scholarship all over the world. </li>
+          </ul>
+        </li> 
+
+        <br>
+      
+        <li> As a high schooler
+          <br><br>
+          <ul>
+            <li><a href="https://www.imo-official.org/participant_r.aspx?id=23008" target="_blank">Gold Medal</a> at International Mathematical Olympiad, 2014, Cape Town, South Africa</li>
+            <li>Special Prize at European Union Contest for Young Scientist, 2014, Warsaw, Poland</li>
+            <li>Gold Medal with perfect score at Balkan Mathematical Olympiad, 2014, Plevne, Bulgaria</li>
+            <li>Silver Medal at International Mathematical Olympiad, 2013, Santa Marta, Colombia</li>
+            <li>First Prize at Turkish National Science Fair, 2014, Ankara, Turkey</li>
+            <li>3 gold and 2 bronze medals at Turkish National Mathematical Olympiads, 2009-2014</li>          
+          </ul>
+        </li>
+
+       </ul>
+      
+
+
+      
+      
+      
+
+
+    
+    
+
+    
+
+      <!-- <h1>Teaching </h1>
+
+      <ol>
+        <li><code>&lt;section&gt;</code> - surrounding block</li>
+        <li><code>&lt;article&gt;</code> - individual posts</li>
+        <li><code>&lt;figure&gt;</code> - image</li>
+        <li><code>&lt;figcaption&gt;</code> - image caption</li>
+        <li><code>&lt;address&gt;</code> - post poster</li>
+        <li><code>&lt;time&gt;</code> - the time of the post</li>
+        <li><code>&lt;q&gt;</code> - a quotation</li>
+      </ol>-->
+      
+      
+    <!--
+      <p>The following <code>&lt;section&gt;</code> element uses a <code>class=&quot;clear&quot;</code> ( <code>&lt;section class=&quot;clear&quot;&gt;</code> ) to clear the floating article elements.</p>
+    </section>
+    <- section 2 ->
+    <section class="clear">
+      <- article 1 ->
+      <article class="odd">
+        <figure><img src="images/demo/80x80.gif" alt="">
+          <figcaption>This is the caption / description for the image</figcaption>
+        </figure>
+        <h2>Post Title</h2>
+        <address>
+        Admin, domainname.com
+        </address>
+        <time datetime="2012-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2012 @08:15:00</time>
+        <p>Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis.</p>
+        <q>This is a quote, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti</q>
+        <p>Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit.</p>
+        <p class="more"><a href="#">Read More &raquo;</a></p>
+      </article>
+      <!-- article 2 ->
+      <article class="even">
+        <figure><img src="images/demo/80x80.gif" alt="">
+          <figcaption>This is the caption / description for the image</figcaption>
+        </figure>
+        <h2>Post Title</h2>
+        <address>
+        Admin, domainname.com
+        </address>
+        <time datetime="2012-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2012 @08:15:00</time>
+        <p>Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui.</p>
+        <p class="more"><a href="#">Read More &raquo;</a></p>
+      </article>
+      <!-- / articles>
+    </section>-->
+    
+
+    
+
+    <!--
+    <p>Here are some of my past and current experiences:</p>
+
+    <ul>
+      <li><b><a href="https://starleague.us/">Star League, INC</a></b> </li>
+
+      I am working part-time with Star League for almost two years. As a lecturer I taught 
+math olympiad courses in AMC 8/10/12 and AIME levels throughout 12-weeks 
+semester-long sessions and summer camps. 
+    
+        <ul>
+          <li>2019 Fall: AMC10/12 Basic and Advanced, 12 week semester at Irvine</li>
+          <li>2019 Fall: AIME Problem Solving, 12 week online interactive class</li>
+          <li>2019 Summer: AIME Advanced and Basic, Summer camps at Cupertino and Irvine </li>
+          <li>2019 Spring: AMC10 Basic and Advanced, 12 week semester at Irvine</li>
+          <li>2018 Summer: AMC8 and AMC10/12, Summer Camp at Cupertino</li>
+          <li>2018 Spring: AMC8  Basic and AMC10 Basic, 12 week semester at Irvine</li>
+          <li>2018 Fall: Prepared AIME Advanced material for 3-week Summer Camp. 
+          The material consist of 15-days of lectures and problem sets under 4 
+          main topics: Algebra, Combinatorics, Geometry and Number Theory.</li>
+
+        </ul>
+      </li>
+      <br>
+      <li><b><a href="https://circles.math.ucla.edu/circles/">Los Angeles Math Circle</a></b></li>
+      2018 Fall, 2019 Winter and Spring: Assistant Instructor in Advanced level(8-9 grades).
+
+
+
+    </ul>-->
+
+
+    
+  </div>
+  <!-- right column -->
+  <!--
+  <aside>
+    <nav>
+      <h2>&lt;Aside&gt; + &lt;Nav&gt;</h2>
+      <ul>
+        <li><a href="#">Free Website Templates</a></li>
+        <li><a href="#">Free CSS Templates</a>
+          <ul>
+            <li><a href="#">Free XHTML Templates</a></li>
+            <li><a href="#">Free Web Templates</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Free Website Layouts</a>
+          <ul>
+            <li><a href="#">Free HTML 5 Templates</a></li>
+            <li><a href="#">Free Webdesign Templates</a>
+              <ul>
+                <li><a href="#">Free FireWorks Templates</a></li>
+                <li><a href="#">Free PNG Templates</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Free Website Themes</a></li>
+      </ul>
+    </nav>
+  </aside>-->
+  <!-- / content body -->
+  <div class="clear"></div>
+  
+
+</div>
+
+
+<footer>
+<section>
+      <h1>Contact Info</h1>
+      <ol>
+        <li><b>Office: </b> MS 5343-1</li>
+        <li><b>email1:</b> oak@math.ucla.edu</li>
+        <li><b>email2:</b> osmanakar1123@hotmail.com</li>
+        <li><a href="https://www.linkedin.com/in/osmanakar/" target="_blank">LinkedIn</a> </li>
+      </ol>
+</section>
+</footer>
+
+
+<footer>
+  <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">math.ucla.edu/oak</a></p>
+  <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+  <div class="clear"></div>
+</footer>
+
+</body>
+</html>
